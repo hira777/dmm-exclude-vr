@@ -1,0 +1,25 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
+    ]
+  },
+  "globals": {
+    "chrome": true,
+    "localStorage": true,
+    "HTMLDocument": true
+  }
+}
