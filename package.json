@@ -1,12 +1,12 @@
 {
   "name": "dmm-exclude-vr",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:chrome": "cd shells/chrome && webpack --mode development --watch --hide-modules",
+    "dev": "cd shells/chrome && webpack --mode development --watch --hide-modules --devtool source-map",
     "build": "cd shells/chrome && webpack --mode production --progress --hide-modules",
-    "zip:chrome": "cd shells && zip -r -FS ../dist/chrome.zip chrome -x *src/* -x *webpack.config.js",
+    "zip": "cd shells && zip -r -FS ../dist/chrome.zip chrome -x *src/* -x *webpack.config.js",
     "release": "node release.js && npm run build && npm run zip"
   },
   "author": "soarflat",
@@ -18,5 +18,6 @@
     "prettier": "^1.11.1",
     "webpack": "^4.0.1",
     "webpack-cli": "^2.0.10"
-  }
+  },
+  "dependencies": {}
 }

@@ -1,13 +1,16 @@
 {
   "name": "DMM EXCLUDE VR",
   "description": "DMMのVR商品を除外するだけの拡張",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
+  "permissions": [
+    "storage"
+  ],
   "content_scripts": [
     {
       "matches": [
@@ -18,5 +21,9 @@
         "build/exclude-vr.js"
       ]
     }
-  ]
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
 }
